@@ -1,0 +1,16 @@
+acc1331a-db96-448a-9651-f8140455fecb ---> chick peas
+36ee7339-3dcf-4105-b350-756db754ac75 ---> green gram
+
+
+Resource : https://data.gov.in
+
+Pulling Data from API : 
+
+import pandas as pd
+
+item = "acc1331a-db96-448a-9651-f8140455fecb"
+apikey = "579b464db66ec23bdd0000018e727101e83a4fd04efcfb66f7ce5050"
+url = "https://api.data.gov.in/resource/"+item+"?api-key="+apikey+"&format=csv&offset=100&limit=1000"
+
+data = pd.read_csv(url)
+
